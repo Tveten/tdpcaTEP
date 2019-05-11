@@ -1,0 +1,27 @@
+Package: tdpcaTEP
+Type: Package
+Title: Simulation Study on TEP Data with TDPCA.
+Version: 0.0.0.9001
+Author: Martin Tveten
+Maintainer: Martin Tveten <martintv@uio.no>
+Description: This package contains all code used to perform
+    a simulation study of TPCA's ability to detect 
+    changepoints in the Tennesse Eastman Process data.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports:
+    doParallel (>= 1.0),
+    assertthat (>= 0.2.0),
+    RColorBrewer (>= 1.1),
+    ggplot2 (>= 2.2.1),
+    reshape2 (>= 1.4.3),
+    gridExtra (>= 2.3),
+    ggpubr (>= 0.2),
+    latex2exp (>= 0.4),
+    Rcpp (>= 1.0.0)
+Depends: R (>= 3.4.0)
+Remotes: Tveten/tpca
+Suggests: testthat
+RoxygenNote: 6.1.1
+LinkingTo: Rcpp

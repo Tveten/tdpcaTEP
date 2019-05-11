@@ -1,0 +1,85 @@
+---
+output:
+  github_document:
+    html_preview: true
+---
+
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# tdpcaTEP
+An `R` package containing all code to reproduce the TEP data results in the paper
+"Online Detection of Sparse Changes in High-Dimensional Data Streams Using Tailored Projections".
+In addition, the package contains the files with the results we obtained
+in the directories /results and /thresholds.
+It is also an aim that this package can be used by others who want to test TDPCA
+for their monitoring tasks, both for bootstrapping thresholds and testing performance
+in terms of expected detection delays (EDD).
+
+## Overview
+Functionality:
+
+* A function to reproduce the entire TEP data study.
+* A function for finding thresholds for TDPCA by non-parametric bootstrapping.
+* Summary and plot functions.
+
+## Installation
+
+You can install tdpcaTEP from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("Tveten/tdpcaTEP")
+```
+
+To reproduce figures from our result files, download the folders /results and
+/thresholds from https://github.com/Tveten/tdpcaTEP and put them in your 
+working R directory before running the plot functions.
+
+## Exported and documented functions
+For more information, see the documentation of the functions below inside R.
+
+* TEP_summary
+* load_TEP_data_globally
+* pfa_edd_table
+* rl_density
+* run_TEP_dpca
+* run_TEP_sim
+* tdpca_arl
+* threshold_finder
+
+The documentation in tpcaMonitoring is helpful to understand the internal functions
+used in the functions above, as they are more or less the same.
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(tdpcaTEP)
+# To run the entire TEP study, use run_TEP_sim().
+# It will take a day or two on a regular computer, but the output from it is also contained in
+# this package so that one can still get plots of results and study the results in more detail.
+# Before running this example code, downloaded
+# the results/ and thresholds/ directories from https://github.com/Tveten/tdpcaTEP
+# and put them in your working directory.
+# The code in run_TEP_sim() specifies in a simple way the simulation
+# setup and the necessary steps in the study.
+
+lag <- 5
+fault_nr <- 15
+
+# rl_density(lag, fault_nr)
+TEP_summary(lag, fault_nr, sort_by = 'edd')
+
+pfa_edd_table()
+
+```
