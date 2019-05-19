@@ -40,9 +40,14 @@ You can install tdpcaTEP from github with:
 devtools::install_github("Tveten/tdpcaTEP")
 ```
 
+The associated Tennessee Eastman Process data are too large to upload here and into the package, so it has to be downloaded manually.
+1. Go to https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1
+2. Download the files TEP_FaultFree_Training.RData and TEP_FaultFree_Training.RData.
+3. Place these files in your working directory.
+
 To reproduce figures from our result files, download the folders /results and
 /thresholds from https://github.com/Tveten/tdpcaTEP and put them in your 
-working R directory before running the plot functions.
+working directory before running the plot functions.
 
 ## Exported and documented functions
 For more information, see the documentation of the functions below inside R.
