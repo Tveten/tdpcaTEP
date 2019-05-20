@@ -1,5 +1,5 @@
 find_dpca_thresholds <- function(dpca_model, n, alpha, type = 'val') {
-  load_TEP_data_globally(no_test = TRUE)
+  load_TEP_data_globally(only_training = TRUE)
   if (type == 'val') {
     x <- get_TEP_train(101:150, return_all = FALSE)
     x <- lapply(x, lag_extend, lag = dpca_model$lag)
