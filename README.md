@@ -17,14 +17,22 @@ Functionality:
 Installation
 ------------
 
-You can install tdpcaTEP from github with:
+The associated Tennessee Eastman Process data are too large to upload here and into the package, so it has to be downloaded manually.
+
+1.  Go to <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1>
+2.  Download the files TEP\_FaultFree\_Training.RData and TEP\_FaultFree\_Training.RData.
+3.  Place these files in your working directory.
+
+After having downloaded the data, you can install tdpcaTEP from github and load the data with:
 
 ``` r
 # install.packages("devtools")
 devtools::install_github("Tveten/tdpcaTEP")
+library(tdpcaTEP)
+load_TEP_data_globally()
 ```
 
-To reproduce figures from our result files, download the folders /results and /thresholds from <https://github.com/Tveten/tdpcaTEP> and put them in your working R directory before running the plot functions.
+To reproduce figures from our result files, download the folders /results and /thresholds from <https://github.com/Tveten/tdpcaTEP> and put them in your working directory before running the plot functions.
 
 Exported and documented functions
 ---------------------------------
@@ -44,8 +52,6 @@ The documentation in tpcaMonitoring is helpful to understand the internal functi
 
 Example
 -------
-
-This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(tdpcaTEP)
