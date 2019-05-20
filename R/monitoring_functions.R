@@ -1,4 +1,4 @@
-#' @useDynLib TEPExample
+#' @useDynLib tdpcaTEP
 #' @importFrom Rcpp sourceCpp
 NULL
 
