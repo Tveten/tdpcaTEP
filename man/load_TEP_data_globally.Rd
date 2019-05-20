@@ -4,10 +4,19 @@
 \alias{load_TEP_data_globally}
 \title{Load the TEP data to the global environment.}
 \usage{
-load_TEP_data_globally(no_test = FALSE)
+load_TEP_data_globally(only_training = FALSE)
+}
+\arguments{
+\item{only_training}{Logical. If TRUE, only the training data is loaded.
+The test data is a large file, so it can be beneficial to not load it if not needed.}
 }
 \description{
-This function loads the TEP data from
-https://github.com/Tveten/tdpcaTEP/tree/master/TEP_data/,
-and puts it in the global environment.
+This function loads the TEP data and puts it in the global environment.
+}
+\details{
+For this function to work, make sure you have downloaded the TEP data from
+https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/6C3JR1
+and placed the fault-free training and faulty testing data in your working directory.
+
+The objects loaded are named "fault_free_training" and "faulty_testing".
 }
