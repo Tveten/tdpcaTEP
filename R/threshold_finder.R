@@ -48,7 +48,7 @@
 #'
 #' @export
 
-threshold_finder <- function(x_train, lag, n, alpha,
+threshold_finder_tdpca <- function(x_train, lag, n, alpha,
                              axes          = NULL,
                              w             = 200,
                              rel_tol       = c(0.2, 0.1, 0.05, 0.025),
